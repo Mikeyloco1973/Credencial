@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Logo superior -->
+    <TextView
+        android:id="@+id/tvServiceOne"
+        android:text="serviceone"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Imagen del técnico -->
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="30dp"
+        android:scaleType="centerCrop"/>
+
+    <!-- Datos del técnico -->
+    <LinearLayout
+        android:id="@+id/layoutDatos"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgFoto"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/tvNombres"
+            android:text="Nombres: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvApellidos"
+            android:text="Apellidos: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvRut"
+            android:text="Rut: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvCargo"
+            android:text="Cargo: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Texto inferior -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:text="Prestando servicios para hp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

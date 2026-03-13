@@ -19,7 +19,7 @@
         android:id="@+id/etRut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Rut (Ej: 26939836-1)"
+        android:hint="Rut (Ej: 12345678-9)"
         android:inputType="text"
         android:layout_marginBottom="16dp"/>
 
@@ -27,7 +27,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contraseña (Ej: 26939836)"
+        android:hint="Contraseña (Ej: 12345678)"
         android:inputType="textPassword"
         android:layout_marginBottom="24dp"/>
 

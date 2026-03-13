@@ -1,80 +1,139 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent">
 
-    <!-- Logo superior -->
-    <TextView
-        android:id="@+id/tvServiceOne"
-        android:text="serviceone"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+    <!-- Fondo con logo HP semitransparente -->
 
-    <!-- Imagen del técnico -->
+    <!-- Logo ServiceOne arriba -->
+
+    <!-- Foto del técnico -->
+
+    <ImageView
+        android:id="@+id/bgHP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1"
+        android:contentDescription="Logo HP de fondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_hp_logo" />
+
+    <ImageView
+        android:id="@+id/logoServiceOne"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="226dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="263dp"
+        android:contentDescription="Logo ServiceOne"
+        android:src="@drawable/splash_serviceone" />
+
     <ImageView
         android:id="@+id/imgFoto"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="30dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Foto Técnico"/>
 
     <!-- Datos del técnico -->
+
+    <!-- Texto inferior con logo HP -->
+
     <LinearLayout
         android:id="@+id/layoutDatos"
-        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="100dp"
         android:layout_toRightOf="@id/imgFoto"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvNombres"
-            android:text="Nombres: "
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tvApellidos"
-            android:text="Apellidos: "
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tvRut"
-            android:text="Rut: "
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tvCargo"
-            android:text="Cargo: "
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <!-- Texto inferior -->
-    <TextView
-        android:id="@+id/tvFooter"
-        android:text="Prestando servicios para hp"
-        android:textSize="16sp"
+    <LinearLayout
+        android:id="@+id/layoutFooter"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Prestando servicios para "
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logoHP"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/layoutFooter"
+        android:contentDescription="Logo HP"
+        android:src="@drawable/ic_hp_logo" />
+
+    <TextView
+        android:id="@+id/tvApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="271dp"
+        android:text="Apellidos:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="219dp"
+        android:layout_marginEnd="188dp"
+        android:text="Cargo:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="393dp"
+        android:text="Nombres:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="217dp"
+        android:layout_marginEnd="424dp"
+        android:text="Rut:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252868798364",
+    "project_id": "credenciales-29e9b",
+    "storage_bucket": "credenciales-29e9b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252868798364:android:2560a45fbc59c2f038ca59",
+        "android_client_info": {
+          "package_name": "com.ionu.credencial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfGbTluPq9awVATlR_ofenA_5u_qCNMeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

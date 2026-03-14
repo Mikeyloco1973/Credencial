@@ -1,41 +1,102 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvTitulo"
+    <!-- Fondo con logo HP semitransparente -->
+    <ImageView
+        android:id="@+id/bgHP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1"
+        android:contentDescription="Logo HP de fondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_hp_logo" />
+
+    <!-- Logo ServiceOne más grande y centrado arriba -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Logo ServiceOne"
+        android:src="@drawable/splash_serviceone" />
+
+    <!-- Contenido principal debajo del logo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        android:layout_below="@id/imgLogo">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio de Sesión"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="32dp"/>
+
+        <EditText
+            android:id="@+id/etRut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rut (Ej: 12345678-9)"
+            android:inputType="text"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña (Ej: 12345678)"
+            android:inputType="textPassword"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Sesión"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Footer centrado con texto y logo HP -->
+    <LinearLayout
+        android:id="@+id/layoutFooter"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inicio de Sesión"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/etRut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Rut (Ej: 12345678-9)"
-        android:inputType="text"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prestando servicios para "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"/>
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña (Ej: 12345678)"
-        android:inputType="textPassword"
-        android:layout_marginBottom="24dp"/>
+        <ImageView
+            android:id="@+id/logoHP"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_hp_logo"
+            android:contentDescription="Logo HP"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFFFFF"/>
-</LinearLayout>
+</RelativeLayout>
